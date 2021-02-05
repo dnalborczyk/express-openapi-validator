@@ -44,10 +44,10 @@ export function applyOpenApiMetadata(
         (<any>req.openapi)._responseSchema = (<any>matched)._responseSchema;
       }
     } else if (openApiContext.isManagedRoute(path)) {
-      throw new NotFound({
-        path: req.path,
-        message: 'not found',
-      });
+      // throw new NotFound({
+      //   path: req.path,
+      //   message: 'not found',
+      // });
     }
     next();
   };
